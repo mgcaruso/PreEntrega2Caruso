@@ -2,6 +2,7 @@ import { useEffect, useState } from "react"
 import cubeData from '../../utilities/cubesData.json'
 import ItemList from "../../components/ItemList/ItemList";
 import loader from '../../assets/animated/loader.gif'
+import { fetchData } from "../../utilities/fetchingFn";
 
 const ItemListContainer = () => {
 
@@ -9,17 +10,7 @@ const ItemListContainer = () => {
     const [loading, setLoading] = useState(true);
 
     //Simulación de método fetch()
-    const fetchData = (data) => {
-        return new Promise((resolve, reject) => {
-            if (data.length > 0) {
-                setTimeout(() => {
-                    resolve(data)
-                }, 3000);
-            } else {
-                reject(new Error("There is no data"))
-            }
-        })
-    }
+    
 
     useEffect(() => {
         fetchData(cubeData).then(res => {

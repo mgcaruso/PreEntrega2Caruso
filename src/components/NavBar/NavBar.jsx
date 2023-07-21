@@ -7,9 +7,7 @@ import { transitionClasses } from '../../utilities/Transitions/TransitionClasses
 import MobileMenu from './MobileMenu/MobileMenu';
 import LogoSolvix from '../../assets/images/logo.png'
 import DropDown from './DropDown/DropDown';
-// import { Link as LinkRouter } from 'react-router-dom'
-import { NavLink as LinkRouter} from 'react-router-dom';
-
+import { NavLink as LinkRouter } from 'react-router-dom';
 const navigation = [
     { name: 'Home', to: '/', current: true },
     { name: 'About', to: 'about', current: false },
@@ -18,12 +16,8 @@ const navigation = [
     { name: 'Contact', to: 'contact', current: false },
 ]
 
-const categories = ["Classics", "Speedcubes", "Shape-Shifting Cubes", "Special Edition Cubes", "Accesories", "Miscellaneous"];
+const categories = ["Classics", "Speedcubes", "Shape-Shifting Cubes", "Special Edition Cubes"];
 
-//No es necesario si uso NavLink
-// function classNames(...classes) {
-//     return classes.filter(Boolean).join(' ')
-// }
 
 export default function NavBar() {
 
@@ -72,7 +66,7 @@ export default function NavBar() {
                                                     //     item.current ? 'bg-primary-inverted text-primary' : 'text-primary-inverted hover:bg-primary-hover hover:text-primary-inverted',
                                                     //     'rounded-md px-3 py-2 text-sm font-normal'
                                                     // )}
-                                                    className={({isActive}) => isActive ? 'bg-primary-inverted text-primary rounded-md px-3 py-2 text-sm font-normal' : 'text-primary-inverted hover:bg-primary-hover hover:text-primary-inverted rounded-md px-3 py-2 text-sm font-normal' }
+                                                    className={({ isActive }) => isActive ? 'bg-primary-inverted text-primary rounded-md px-3 py-2 text-sm font-normal' : 'text-primary-inverted hover:bg-primary-hover hover:text-primary-inverted rounded-md px-3 py-2 text-sm font-normal'}
                                                     aria-current={item.current ? 'page' : undefined}
                                                 >
                                                     {item.name}
