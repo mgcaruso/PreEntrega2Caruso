@@ -12,7 +12,7 @@ const FollowUs = () => {
             </div>
 
             <section className='second-section relative h-[100px] w-full'>
-                <ul className='social-media flex flex-wrap w-full justify-center gap-1'>
+                <ul className='social-media flex flex-wrap w-full justify-center flex-col sm:flex-row items-center'>
                     <li>
                         <a className="facebook flex items-center justify-center" href="#">
                             <span></span>
